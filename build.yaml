@@ -6,10 +6,10 @@ schedules:
       exclude:
         # Only build with latest for mono and netstandard 2.0
         - dotnet: ['mono', 'netcoreapp2.1']
-          cassandra: ['2.1', '2.2', '3.0', '4.0']
+          cassandra: ['2.1', '2.2', '3.0', '4.0-alpha2']
         # Only build with 2.1 and latest for netstandard 1.5
         - dotnet: 'netcoreapp2.0'
-          cassandra: ['2.2', '3.0']
+          cassandra: ['2.2', '3.0', '4.0-alpha2']
   nightly:
     # nightly job for primary branches to run all configs.
     schedule: nightly
@@ -29,7 +29,7 @@ cassandra:
   - '2.2'
   - '3.0'
   - '3.11'
-  - '4.0'
+  - '4.0-alpha2'
 dotnet:
   - 'mono'
   - 'netcoreapp2.0'
