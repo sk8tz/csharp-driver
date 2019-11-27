@@ -47,6 +47,10 @@ build:
       echo "========== Setting Apache Cassandra Version =========="
       export CASSANDRA_VERSION_ORIGINAL=$CASSANDRA_VERSION
       export CASSANDRA_VERSION=$CCM_CASSANDRA_VERSION
+      
+      if [ $CASSANDRA_VERSION = '' ]; then
+          export CASSANDRA_VERSION=$CASSANDRA_VERSION_ORIGINAL
+      fi
 
       echo "========== Copying ssl files to $HOME/ssl =========="
       cp -r /home/jenkins/ccm/ssl $HOME/ssl
