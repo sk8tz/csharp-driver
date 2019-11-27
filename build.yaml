@@ -48,7 +48,7 @@ build:
       export CASSANDRA_VERSION_ORIGINAL=$CASSANDRA_VERSION
       export CASSANDRA_VERSION=$CCM_CASSANDRA_VERSION
       
-      if [ $CASSANDRA_VERSION = '' ]; then
+      if [ -z "$CASSANDRA_VERSION" ]; then
           export CASSANDRA_VERSION=$CASSANDRA_VERSION_ORIGINAL
       fi
 
