@@ -29,7 +29,7 @@ cassandra:
   - '2.2'
   - '3.0'
   - '3.11'
-  - '4.0-alpha2'
+  - '4.0'
 dotnet:
   - 'mono'
   - 'netcoreapp2.0'
